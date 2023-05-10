@@ -83,6 +83,7 @@ document.addEventListener("DOMContentLoaded", () => {
     } else {
       output.textContent = "wrong! try again...";
     }
+    //creates a button on the screen to let user play again
     const myDiv = document.getElementById("myDiv");
     myDiv.innerHTML = '<button id="myButton">Play Again!</button>';
     const myButton = document.getElementById("myButton");
