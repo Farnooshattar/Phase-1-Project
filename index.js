@@ -42,6 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (timeLeft === 0) {
          clearInterval(countdownInterval);
          countdownElement.innerHTML = "Time's up!";
+         //when the time is up all the buttons should be disabled untill the user plays again
          myText.disabled = true;
          final.disabled = true;
          timeUp = true;
