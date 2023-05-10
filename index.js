@@ -21,6 +21,10 @@ document.addEventListener("DOMContentLoaded", () => {
         //reveals the portion of the image that is under user's mouse or hover
         const squares = document.querySelectorAll(".squares");
         squares.forEach((square) => square.addEventListener("mouseover", reveal));
+        //intitializes reveals to zero each time the game starts
+        reveals = 0;
+        //updates the reveals by mouseovers
+        revealBoard.textContent = `reveals: ${reveals}`;
     }
     function fetchAndDisplay() {
         const id = Math.floor(Math.random() * 8)+1;
