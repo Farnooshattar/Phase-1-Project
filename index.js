@@ -25,6 +25,13 @@ document.addEventListener("DOMContentLoaded", () => {
         reveals = 0;
         //updates the reveals by mouseovers
         revealBoard.textContent = `reveals: ${reveals}`;
+        //gets the elements that user interacts with on the screen
+        const myText = document.getElementById("inputText");
+        myText.disabled = false;
+        const final = document.getElementById("final");
+        final.disabled = false;
+        const gameLength = document.getElementById("game_length").value;
+        timeLeft = parseInt(gameLength.slice(0, 2));
     }
     function fetchAndDisplay() {
         const id = Math.floor(Math.random() * 8)+1;
