@@ -52,6 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
      }, 1000);
     }
     function fetchAndDisplay() {
+        //every time that fetch is called a random picture is picked from the database
         const id = Math.floor(Math.random() * 8)+1;
         fetch(`http://localhost:3000/toys/${id}`)
           .then((resp) => resp.json())
