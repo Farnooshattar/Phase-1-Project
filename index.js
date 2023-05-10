@@ -11,4 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
    let timeUp = false;
    let timeLeft = 0;
    let countdownInterval;
+
+    //adds an eventlistener to the satrt button
+    startBtn.addEventListener("click", startGame);
 }) 
