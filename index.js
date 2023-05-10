@@ -32,6 +32,21 @@ document.addEventListener("DOMContentLoaded", () => {
         final.disabled = false;
         const gameLength = document.getElementById("game_length").value;
         timeLeft = parseInt(gameLength.slice(0, 2));
+        //sets a timer using setInterval function for a countdown of time
+        timeUp = false;
+        countdownElement.innerHTML = timeLeft + " seconds left";
+        clearInterval(countdownInterval);
+        countdownInterval = setInterval(() => {
+        timeLeft--;
+        countdownElement.innerHTML = timeLeft + " seconds left";
+        if (timeLeft === 0) {
+         clearInterval(countdownInterval);
+         countdownElement.innerHTML = "Time's up!";
+         myText.disabled = true;
+         final.disabled = true;
+         timeUp = true;
+       }
+     }, 1000);
     }
     function fetchAndDisplay() {
         const id = Math.floor(Math.random() * 8)+1;
