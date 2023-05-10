@@ -70,4 +70,27 @@ document.addEventListener("DOMContentLoaded", () => {
        g3.currentTime = 0;
        g3.play();
      }
+     //Gets the button element to check users input
+   const final = document.getElementById("final");
+   //adds an eventlistener to the button to check the users input
+   final.addEventListener("click", () => {
+    const input = document.getElementById("inputText").value;
+    //document.getElementById("displayText").innerHTML = "You typed: " + input;
+    const output = document.querySelector("#output");
+    if (input === pic.name) {
+      output.textContent = "correct!";
+    } else {
+      output.textContent = "wrong! try again...";
+    }
+    const myDiv = document.getElementById("myDiv");
+    myDiv.innerHTML = '<button id="myButton">Play Again!</button>';
+    const myButton = document.getElementById("myButton");
+    myButton.addEventListener("click",() => {
+     const input = document.getElementById("inputText")
+     input.value = " "; // clear the contents of the myDiv element
+     startGame(); // fetch and display a new picture
+     
+   });
+  });
+    })
    
