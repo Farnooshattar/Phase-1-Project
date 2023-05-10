@@ -36,6 +36,8 @@ document.addEventListener("DOMContentLoaded", () => {
         timeUp = false;
         countdownElement.innerHTML = timeLeft + " seconds left";
         clearInterval(countdownInterval);
+        //setInterval returns a value that based on that we can clear 
+        //the timer afetr 1000 milli seconds back to zero
         countdownInterval = setInterval(() => {
         timeLeft--;
         countdownElement.innerHTML = timeLeft + " seconds left";
