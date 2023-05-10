@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
    const revealBoard = document.querySelector(".reveals");
    const countdownElement = document.getElementById("countdown");
    //get the audio file for the mouseover events
-   const g3 = new Audio("./media/g3-04.wav");
+   const g3 = new Audio("./media/clickclick.wav");
    //intialize the variables
    let reveals = 0;
    let timeUp = false;
