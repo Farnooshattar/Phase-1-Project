@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap");
+
+html {
+  box-sizing: border-box;
+  font-size: 10px;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Amatic SC", cursive;
+  font-size: 2rem;
+  text-align: center;
+}
+
+h1 {
+  font-size: 4rem;
+  margin: 0;
+  font-weight: bolder;
+}
+
+.reveals {
+  color: rgb(200, 5, 114);
+  margin: 0;
+  font-size: 3rem;
+}
+
+.startBtn {
+  background: rgba(190, 19, 19, 0.2);
+  border: green;
+  border-style: solid;
+  border-width: 5px;
+  font-size: 3rem;
+  cursor: pointer;
+  font-family: "Amatic SC", cursive;
+  margin-top: 10px;
+}
+
+#countdown {
+  text-align: center;
+  font-size: 3rem;
+  margin: 0;
+  font-weight: bold;
+}
+
+.game_length {
+  display: flex;
+  justify-content: center;
+  font-size: x-large;
+  font-weight: bold;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: #9cded6 solid 3px;
+  background-image: url("./toy_story.jpg");
+}
+
+#picture {
+  background: #000000;
+  background-size: cover;
+}
+
+.topGrid {
+  position: "fixed";
+  justify-content: center;
+  border: grey solid 1px;
+  width: 400px;
+  height: 100px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.myGrid {
+  position: "fixed";
+  justify-content: center;
+  border: grey solid 1px;
+  width: 400px;
+  height: 600px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+.squares {
+  width: calc(400px / 4);
+  height: calc(600px / 6);
+  background-color: #999999;
+  border: white solid 1px;
+}
+
+#tile:hover {
+  background-color: transparent;
+}
+
+fieldset {
+  margin-top: 10px;
+  background-color: #7bd0ea;
+  font-size: x-large;
+  font-weight: bold;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+legend {
+  color: rgb(255, 255, 0);
+  background-color: blue;
+  font-size: x-large;
+  font-weight: bold;
+  animation: blink 1s infinite;
+}
+
+#output {
+  margin: 0px;
+  color: red;
+  font-weight: bolder;
+  font-size: 3rem;
+}
+
+#displayText {
+  margin: 0px;
+}
+
+.banner {
+  overflow: hidden;
+}
+
+.words {
+  position: relative;
+  animation: move-words 20s linear infinite;
+  margin: 0;
+}
+
+@keyframes move-words {
+  0% {
+    left: 100%;
+  }
