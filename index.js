@@ -90,7 +90,7 @@ document.addEventListener("DOMContentLoaded", () => {
     myButton.addEventListener("click",() => {
      const input = document.getElementById("inputText")
      input.value = " "; // clears users input for the next game
-     startGame(); // fetch and display a new picture
+     startGame(); // start the game again by fetching and diplaying a new picture 
      
    });
   });
