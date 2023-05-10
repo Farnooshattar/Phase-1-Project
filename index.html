@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./index.js" defer></script>
+    <title>Guess Game!</title>
+  </head>
+  <body>
+    <h1>Guess The Picture!</h1>
+    <div class="game_length">
+      <label for="game_length">Game Length:&nbsp;</label>
+      <select name="game_length" id="game_length">
+        <option value="15000" selected>20 seconds</option>
+        <option value="25000">30 seconds</option>
+        <option value="35000">40 seconds</option>
+      </select>
+    </div>
+    <div>
+      <button class="startBtn" id="start_btn">Start!</button>
+    </div>
+    <h1 class="reveals">Reveals:0</h1>
+    <p>Time remaining: <span id="countdown">0</span></p>
+    <fieldset>
+      <div class="banner">
+        <h3 class="words">Buzz...Woody...Rex...Bo Beep...Forky...Hamm...Slinky...Sid!</h3>
+      </div>
+      <legend>Type your guess in the box!</legend>
+      <input type="text" id="inputText" placeholder="Type here" />
+      <button id="final">Check your answer!</button>
+      <p id="displayText"></p>
+      <div id="output"></div>
+      <div id="myDiv"></div>
+    </fieldset>
+    <div class="container">
+      <div class="myGrid" id="picture" name="">
+        <div class="squares" id="tile"></div>
+        <div class="squares" id="tile"></div>
+        <div class="squares" id="tile"></div>
+        <div class="squares" id="tile"></div>
+        <div class="squares" id="tile"></div>
+        <div class="squares" id="tile"></div>
+        <div class="squares" id="tile"></div>
+        <div class="squares" id="tile"></div>
+        <div class="squares" id="tile"></div>
+        <div class="squares" id="tile"></div>
+        <div class="squares" id="tile"></div>
+        <div class="squares" id="tile"></div>
+        <div class="squares" id="tile"></div>
+        <div class="squares" id="tile"></div>
+        <div class="squares" id="tile"></div>
+        <div class="squares" id="tile"></div>
+        <div class="squares" id="tile"></div>
+        <div class="squares" id="tile"></div>
+        <div class="squares" id="tile"></div>
+        <div class="squares" id="tile"></div>
+        <div class="squares" id="tile"></div>
+        <div class="squares" id="tile"></div>
+        <div class="squares" id="tile"></div>
+        <div class="squares" id="tile"></div>
+      </div>
+    </div>
+  </body>
+</html>
