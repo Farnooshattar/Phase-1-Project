@@ -17,6 +17,10 @@ document.addEventListener("DOMContentLoaded", () => {
     //calls the startGame function and fetches the data from JSON Database
     function startGame() {
         fetchAndDisplay();
+        //adds eventlisteners to the tiles on the grid
+        //reveals the portion of the image that is under user's mouse or hover
+        const squares = document.querySelectorAll(".squares");
+        squares.forEach((square) => square.addEventListener("mouseover", reveal));
     }
     function fetchAndDisplay() {
         const id = Math.floor(Math.random() * 8)+1;
