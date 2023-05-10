@@ -53,13 +53,21 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     function fetchAndDisplay() {
         //every time that fetch is called a random picture is picked from the database
-        const id = Math.floor(Math.random() * 8)+1;
-        fetch(`http://localhost:3000/toys/${id}`)
-          .then((resp) => resp.json())
-          .then((data) => {
-            document.getElementById("picture").style.backgroundImage =
-              "url('" + data.image + "')";
-            pic.name = data.name;
-          });
-      }
-}) 
+       const id = Math.floor(Math.random() * 8)+1;
+       fetch(`http://localhost:3000/toys/${id}`)
+         .then((resp) => resp.json())
+         .then((data) => {
+           document.getElementById("picture").style.backgroundImage =
+             "url('" + data.image + "')";
+           pic.name = data.name;
+         });
+     }
+     //Defines the reveal function and plays a sound by mouseover
+     function reveal(e) {
+       if (!e.isTrusted) return;
+       reveals++;
+       revealBoard.textContent = `reveals: ${reveals}`;
+       g3.currentTime = 0;
+       g3.play();
+     }
+   
