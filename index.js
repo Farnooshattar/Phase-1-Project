@@ -14,7 +14,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
     //adds an eventlistener to the satrt button
     startBtn.addEventListener("click", startGame);
+    //calls the startGame function and fetches the data from JSON Database
     function startGame() {
         fetchAndDisplay();
     }
+    function fetchAndDisplay() {
+        const id = Math.floor(Math.random() * 8)+1;
+        fetch(`http://localhost:3000/toys/${id}`)
+          .then((resp) => resp.json())
+          .then((data) => {
+            document.getElementById("picture").style.backgroundImage =
+              "url('" + data.image + "')";
+            pic.name = data.name;
+          });
+      }
 }) 
