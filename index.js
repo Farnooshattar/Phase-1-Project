@@ -77,6 +77,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const input = document.getElementById("inputText").value;
     //document.getElementById("displayText").innerHTML = "You typed: " + input;
     const output = document.querySelector("#output");
+    //checks the user input witha a simple if/else
     if (input === pic.name) {
       output.textContent = "correct!";
     } else {
