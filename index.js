@@ -14,4 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     //adds an eventlistener to the satrt button
     startBtn.addEventListener("click", startGame);
+    function startGame() {
+        fetchAndDisplay();
+    }
 }) 
