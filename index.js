@@ -74,13 +74,17 @@ document.addEventListener("DOMContentLoaded", () => {
    const final = document.getElementById("final");
    //adds an eventlistener to the button to check the users input
    final.addEventListener("click", () => {
-    const input = document.getElementById("inputText").value;
+    const input = document.getElementById("inputText").value.trim()
+    console.log(input, pic.name)
     //document.getElementById("displayText").innerHTML = "You typed: " + input;
     const output = document.querySelector("#output");
     //checks the user input witha a simple if/else
     if (input === pic.name) {
+      console.log("correct", input, pic.name)
       output.textContent = "correct!";
     } else {
+      console.log("incorrect", input, pic.name)
+
       output.textContent = "wrong! try again...";
     }
     //creates a button on the screen to let user play again
@@ -89,7 +93,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const myButton = document.getElementById("myButton");
     myButton.addEventListener("click",() => {
      const input = document.getElementById("inputText")
-     input.value = " "; // clears users input for the next game
+     input.value = ""; // clears users input for the next game
      startGame(); // start the game again by fetching and diplaying a new picture 
      
    });
